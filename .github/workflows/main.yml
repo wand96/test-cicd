@@ -42,9 +42,12 @@ jobs:
       # Connect to EKS cluster
       - name: Connect to EKS cluster 
         run: aws eks --region  ${{ secrets.AWS_DEFAULT_REGION }} update-kubeconfig --name  ${{ secrets.EKS_NAME }}
-
+      
+      #
+      
       # rollout   
       - name: was-deploy restart
         run: kubectl set image deploy/was was=${{ secrets.DOCKERHUB_USERNAME }}/team2:django_${GITHUB_RUN_NUMBER}
+        
 
         
