@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
-#import pymysql
+import pymysql
 # pymysql django ORM 연동
-#pymysql.install_as_MySQLdb()
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,19 +83,19 @@ WSGI_APPLICATION = 'mydjango.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'django_db', # DB명
-    #     'USER': 'python', # 데이터베이스 계정
-    #     'PASSWORD':'python', # 계정 비밀번호
-    #     # 'HOST':'localhost', # 데이테베이스 IP
-    #     'HOST':'mysql.cgx0gwgzdjyz.us-east-1.rds.amazonaws.com',
-    #     'PORT':'3306', # 데이터베이스 port
-    # }
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+    #}
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': 'django_db', # DB명
+         'USER': 'python', # 데이터베이스 계정
+         'PASSWORD':'python', # 계정 비밀번호
+         # 'HOST':'localhost', # 데이테베이스 IP
+         'HOST':'mysql-svc',
+         'PORT':'3306', # 데이터베이스 port
+     }
  }
 
 
@@ -139,3 +139,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
 LOGIN_REDIRECT_URL = '/blog'
+
+
+CSRF_TRUSTED_ORIGINS = ["http://aws.wayrkks.com"]

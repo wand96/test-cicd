@@ -6,6 +6,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from .models import Post, Comment
 from .forms import PostModelForm, PostForm, CommentModelForm
 
+
 # 댓글승인
 @login_required
 def comment_approve(request, pk):
@@ -150,4 +151,7 @@ def post_list_first(request):
     # return render(request, 'blog/post_list.html')
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'blog/post_list.html', {'post_list': posts})
+
+
+
 
