@@ -141,4 +141,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 LOGIN_REDIRECT_URL = '/blog'
 
 
-CSRF_TRUSTED_ORIGINS = ["http://aws.wayrkks.com"]
+CSRF_TRUSTED_ORIGINS = ["http://web.wandstudio.net"]

@@ -52,3 +52,7 @@ jobs:
       # rollout   
       - name: was-deploy restart
         run: kubectl set image deploy/was was=${{ secrets.DOCKERHUB_USERNAME }}/team2:django_${GITHUB_RUN_NUMBER}
+
+      - name: rollout check
+        run: kubectl rollout status deployment/was
+        
