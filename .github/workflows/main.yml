@@ -45,7 +45,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region:  ${{ secrets.AWS_DEFAULT_REGION }}
           
-      # Connect to EKS cluster s
+      # Connect to EKS cluster
       - name: Connect to EKS cluster 
         run: aws eks --region  ${{ secrets.AWS_DEFAULT_REGION }} update-kubeconfig --name  ${{ secrets.EKS_NAME }}
 
