@@ -56,5 +56,5 @@ h1, h2, h3, h4 {
 .item-bg{
     width: 640px;
     height: 360ps;
-    background-image: url(landing.jpg);
+    background-image: url(./landing.jpg);
 }
