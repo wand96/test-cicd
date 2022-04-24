@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="ko">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>출결관리 시스템</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext">
-  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    
+    <meta charset="UTF-8">
+    <title>출결관리 시스템</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
     <div class="page-header">
         <h1><center href="{% url 'post_list_home' %}">출결관리 시스템</center></h1>
     </div>
-    <div class="bgSizeContain">
-
-        <div class="row">
-            <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-            </div>
-        </div>
+    <div class="content container">
+      <div class="item-bg"></div>
     </div>
 </body>
 </html>

@@ -53,13 +53,8 @@ h1, h2, h3, h4 {
     margin: 20px 0px 20px 20px;
 }
 
-.bgSizeContain {
+.item-bg{
+    width: 640px;
+    height: 360ps;
     background-image: url(landing.jpg);
-    background-size: contain;
-    width: 160px;
-    height: 160px;
-    border: 2px solid;
-    color: pink;
-    resize: both;
-    overflow: scroll;
-  }
+}
